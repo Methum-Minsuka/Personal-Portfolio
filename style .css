@@ -9,7 +9,7 @@
 
 :root{
     --text-color:#f5f5f5;
-    --hover-color1: #12f7ff;
+    --hover-color: #12f7ff;
     --bg-color:#250821;
     --scon-bg-color:#292e33;
     --big-font:2.5rem;
@@ -46,5 +46,15 @@ header{
 }
 
 span{
-    color: var(--hover-color1);
+    color: var(--hover-color);
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 20px;
 }
