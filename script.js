@@ -12,25 +12,25 @@ words.forEach((word) => {
 let currentwordIndex = 0;
 let maxWordIndex = words.length - 1;
 
-let changeText = (index) => {
-    let currentwor = words[currentwordIndex];
-    let nextword = currentwordIndex === maxWordIndex ? words[0] : words[currentwordIndex + 1];
+let changeText = () => {
+    let currentWord = words[currentwordIndex];
+    let nextWord = currentwordIndex === maxWordIndex ? words[0] : words[currentwordIndex + 1];
 
-    aarray.from(currentwor.children).forEach((letter, i) => {
+    Array.from(currentWord.children).forEach((letter, i) => {
         setTimeout(() => {
             letter.className = "letter out";
-        },i*80);
+        }, i * 80);
     });
 
-    nextword.style.opacity=1;
-    Array.from(nextword.children).forEach((letter, i) => {
+    nextWord.style.opacity = 1;
+    Array.from(nextWord.children).forEach((letter, i) => {
         letter.className = "letter behind";
-        setTimeout(()=>{
+        setTimeout(() => {
             letter.className = "letter in";
-        },340 + i * 80)
-    })
-    currentwordIndex = currentwordIndex === maxWordIndex  ? 0 : currentwordIndex+1;
+        }, 340 + i * 80);
+    });
+    currentwordIndex = currentwordIndex === maxWordIndex ? 0 : currentwordIndex + 1;
 };
 
-changeText()
-setInterval(changeText,3000)
+changeText();
+setInterval(changeText, 3000);
