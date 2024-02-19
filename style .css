@@ -109,3 +109,15 @@ section{
     font-size: 1.5rem;
     font-weight: 600;
 }
+
+.change-text h3{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+
+.change-text h3 .word{
+    position: absolute;
+    display: flex;
+    opacity: 0;
+}
