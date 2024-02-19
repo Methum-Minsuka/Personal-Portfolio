@@ -42,4 +42,9 @@ header{
     font-size: 26px;
     font-weight: 700;
     letter-spacing: 1px;
+    padding: 20px 10%;
+}
+
+span{
+    color: var(--hover-color1);
 }
